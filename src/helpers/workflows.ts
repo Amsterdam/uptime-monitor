@@ -49,6 +49,7 @@ export const graphsCiWorkflow = async () => {
 name: Graphs CI
 permissions:
   contents: read
+  actions: write
 on:
   schedule:
     - cron: "${workflowSchedule.graphs || GRAPHS_CI_SCHEDULE}"
