@@ -117,7 +117,7 @@ const setupCiWorkflow = async () => {
 
 name: Setup CI
 permissions:
-  contents: read
+  contents: write
 on:
   push:
     paths:
