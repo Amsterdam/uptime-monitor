@@ -1130,6 +1130,7 @@ const graphsCiWorkflow = async () => {
 name: Graphs CI
 permissions:
   contents: read
+  actions: write
 on:
   schedule:
     - cron: "${workflowSchedule.graphs || constants_1.GRAPHS_CI_SCHEDULE}"
