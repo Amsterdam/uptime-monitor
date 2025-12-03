@@ -1349,7 +1349,7 @@ const updateTemplateCiWorkflow = async () => {
 
 name: Update Template CI
 permissions:
-  contents: read
+  contents: write
 on:
   schedule:
     - cron: "${workflowSchedule.updateTemplate || constants_1.UPDATE_TEMPLATE_CI_SCHEDULE}"
