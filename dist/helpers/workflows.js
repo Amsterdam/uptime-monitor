@@ -39,6 +39,8 @@ const graphsCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Graphs CI
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "${workflowSchedule.graphs || constants_1.GRAPHS_CI_SCHEDULE}"
@@ -79,6 +81,8 @@ const responseTimeCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Response Time CI
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "${workflowSchedule.responseTime || constants_1.RESPONSE_TIME_CI_SCHEDULE}"
@@ -112,6 +116,8 @@ const setupCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Setup CI
+permissions:
+  contents: read
 on:
   push:
     paths:
@@ -178,6 +184,8 @@ const siteCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Static Site CI
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "${workflowSchedule.staticSite || constants_1.STATIC_SITE_CI_SCHEDULE}"
@@ -218,6 +226,8 @@ const summaryCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Summary CI
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "${workflowSchedule.summary || constants_1.SUMMARY_CI_SCHEDULE}"
@@ -249,6 +259,8 @@ const updateTemplateCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Update Template CI
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "${workflowSchedule.updateTemplate || constants_1.UPDATE_TEMPLATE_CI_SCHEDULE}"
@@ -280,6 +292,8 @@ const updatesCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Updates CI
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "${workflowSchedule.updates || constants_1.UPDATES_CI_SCHEDULE}"
@@ -309,6 +323,8 @@ const uptimeCiWorkflow = async () => {
     return `${await introComment()}
 
 name: Uptime CI
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "${workflowSchedule.uptime || constants_1.UPTIME_CI_SCHEDULE}"
